@@ -5,6 +5,7 @@
 package Lists;
 
 import java.util.*;
+
 /**
  *
  * @author chris
@@ -15,7 +16,27 @@ public class ListExample {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+
+        List<String> words = new ArrayList<>();
+        words.add("Java");
+        words.add("is");
+        words.add("awesome");
+
+        Iterator<String> iterator = words.iterator();
+        while (iterator.hasNext()) {
+            String word = iterator.next();
+            System.out.print(word + " ");
+            if (word.equals("is") || word.equals("Java")) {
+                iterator.remove();
+            }
+        }
         
+        
+
+//        a.World Hello
+//        b.Hello World
+//        c.World World
+//        d.Hello Hello
         // Create a List using ArrayList
         List<String> myList = new ArrayList<>();
 
@@ -52,7 +73,7 @@ public class ListExample {
 
         // Print the list after setting an element
         System.out.println("List after setting element: " + myList);
-        
+
     }
-    
+
 }
